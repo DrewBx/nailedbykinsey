@@ -1,0 +1,21 @@
+*, *::before, *::after {
+    color: white;
+    font-size: 18px;
+    touch-action: manipulation;
+    padding: 2vmin;
+    --bgColor: rgb(33, 33, 33);
+}
+body {
+    padding:0;
+    margin:0;
+    background-color: var(--bgColor);
+}
+.iClass {
+    padding: 1px;
+}
+.hClass {
+    padding: 1px;
+}
+.bClass {
+    padding: 1px;
+}
