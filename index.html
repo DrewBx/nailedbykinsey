@@ -2,34 +2,104 @@
 <html lang="en">
 <head>
     <title>@nailedbykinsey</title>
-    <link rel="icon" href="logo.png">
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
-</head>
+    <link rel="icon" href="icons/logo.png">
+    <style>
+        *, *::before, *::after {
+            font-family: 'Roboto', sans-serif;
+            color: black;
+            font-size: 18px;
+            touch-action: manipulation;
+            padding: 2vmin;
+            --bgColor: #fbe4f8;
+        }
+        body {
+            padding:0;
+            margin:0;
+            background-color: var(--bgColor);
+            text-align: center;
+        }
+        .nameC {
+            padding-top: 30px;
+            padding-bottom: 25px;
+            font-size: 40px;
+            font-weight: 300;
+        }
+        .tagC {
+            padding: 1px;
+            font-size: 24px;
+            padding-bottom: 25px;
+        }
+        .linksC {
+            padding: 1px;
+        }
+        .linkC {
+            border: 2px solid black;
+            border-radius: 25px;
+            display: grid;
+            grid-template-columns: 75px 150px;
+            padding: 0px;
+            width: 350px;
+            text-align: justify;
+            margin: auto;
+            margin-bottom: 25px;
+        }
+        .linkC:hover {
+            background-color: #feabf3;
+            color: white;
+            border: 3px solid black;
+        }
+        .iconC {
+            width: 45px;
+            height: 45px;
+            padding: 10px;
+            padding-left: 25px;
+        }
+        .textC {
+            padding: 0px;
+            padding-left: 45px;
+            padding-top: 23px;
+            width: 200px;
+        }
+    </style>
+ </head>
 <body>
-    <div class="nameC">Kinsey Black</div>
-    <div class="tagC">@nailedbykinsey</div>
-    <div class="linksC">
-        <div class="linkC">
-            <img class="iconC" src="icons/square.png" alt="square">
-            <div class="textC">Book Me!</div>
-        </div>
-        <div class="linkC">
-            <img class="iconC" src="icons/messenger.png" alt="messenger">
-            <div class="textC">Contact Me!</div>
-        </div>
-        <div class="linkC">
-            <img class="iconC" src="icons/facebook.png" alt="facebook">
-            <div class="textC">Connect With Me!</div>
-        </div>
-        <div class="linkC">
-            <img class="iconC" src="icons/instagram.png" alt="instagaram">
-            <div class="textC">See Me!</div>
-        </div>
-        <div class="linkC">
-            <img class="iconC" src="icons/tiktok.png" alt="tiktok">
-            <div class="textC">Watch Me!</div>
-        </div>
-    </div>
+    <script>
+        const site = ["square", "messenger", "facebook", "instagram", "tiktok"];
+        const tag = ["Book", "Contact", "Connect with", "See", "Watch"];
+
+        function clickDiv(site) {
+            if (site == "square") {
+                window.open("https://nailedbykinsey.square.site/");
+            } else if (site == "messenger") {
+                window.open("http://fb.me/msg/nailedbykinsey");
+            } else if (site == "facebook") {
+                window.open("https://www.facebook.com/nailedbykinsey");
+            } else if (site == "instagram") {
+                window.open("https://www.instagram.com/nailedbykinsey/");
+            } else if (site == "tiktok") {
+                window.open("https://www.tiktok.com/@nailedbykinsey");
+            } else {
+                console.log("error");
+            };
+        };
+
+        function pageLoad() {
+            document.body.innerHTML = 
+            '<div class="nameC">Kinsey Black</div>' +
+            '<div class="tagC">@nailedbykinsey</div>' +
+            '<div class="linksC" id="linksC">' +
+            '</div>';
+            let linksC = document.getElementById("linksC");
+            for (let i = 0; i < site.length; i++) {
+                linksC.innerHTML = linksC.innerHTML +
+                '<div class="linkC" onclick="clickDiv(\'' + site[i] + '\')">' +
+                    '<img class="iconC" src="icons/' + site[i] + '.png" alt="' + site[i] + '">' +
+                    '<div class="textC">' + tag[i] + ' Me!</div>' +
+                '</div>';
+            };
+        };
+
+        pageLoad();
+    </script>
 </body>
 </html>
