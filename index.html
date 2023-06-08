@@ -63,6 +63,7 @@
     <script>
         const site = ["square", "messenger", "facebook", "instagram", "tiktok"];
         const tag = ["Book", "Contact", "Connect with", "See", "Watch"];
+        const iconSs = ["we9yiPJ", "J74wP2O", "Zj6yAwp", "IOc5Pmg", "J1Sf6n9"];
 
         function clickDiv(site) {
             if (site == "square") {
@@ -90,7 +91,7 @@
             for (let i = 0; i < site.length; i++) {
                 linksC.innerHTML = linksC.innerHTML +
                 '<div class="linkC" onclick="clickDiv(\'' + site[i] + '\')">' +
-                    '<img class="iconC" src="icons/' + site[i] + '.png" alt="' + site[i] + '">' +
+                    '<img class="iconC" src="https://i.imgur.com/' + iconSs[i] + '.png" alt="' + site[i] + '">' +
                     '<div class="textC">' + tag[i] + ' Me!</div>' +
                 '</div>';
             };
