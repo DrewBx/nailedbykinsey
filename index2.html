@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>@nailedbykinsey</title>
+    <link rel="icon" href="icons/logo.png">
+    <style>
+        *, *::before, *::after {
+            font-family: 'Roboto', sans-serif;
+            color: black;
+            font-size: 18px /*3vh*/;
+            touch-action: manipulation;
+            padding: 2vmin;
+            --bgColor: #fbe4f8;
+        }
+        body {
+            padding:0;
+            margin:0;
+            background-color: var(--bgColor);
+            text-align: center;
+        }
+        .head {
+            position: fixed;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.419);
+            height: 40px;
+            line-height: 40px;
+            top: 0;
+            left: 0;
+            z-index: 999;
+            padding: 0px;
+        }
+        .bod {
+            margin-top: 100px;
+        }
+    </style>
+ </head>
+<body>
+    <div class="head">
+        <div class="logo"><img class="iconC" src="icons/logo.png" alt="K"></div>
+        <div class="links">
+            <div class="linksl">
+
+            </div>
+            <div class="linksr">
+                <div class="social"><!--Square--></div>
+                <div class="social"><!--Messenger--></div>
+                <div class="social"><!--Facebook--></div>
+                <div class="social"><!--Instagram--></div>
+                <div class="social"><!--TikTok--></div>
+            </div>
+        </div>
+    </div>
+    <div class="bod">
+        <div class="nameC">Kinsey Black</div>
+        <div class="tagC">@nailedbykinsey</div>
+        <div class="aboutme">
+            <div class="abouthead">About Me</div>
+            <div class="aboutpara">
+                imyl ghxs! b'bl ylfj, q fjkq okwrfshhm kmr tqfsit bfnyp. tkxuj cgt qy wtkqpd hmfm, qy'bj g'qag njl kpt sjfnxjwsy jqsfxif cgt wi gkj aigfc.
+            </div>
+            <div class="aboutpara">
+                ei, k'z qlsuv, f pnbmp kiprrq uds i wcnlyd rujv duxps. sluvp xq tmy jhtqd otcf, t'ze u'xui dqo cjd vhvsxhxbj pjbhwmdv xqat nwhshwcsm. dzr'd mofaw urc wmkdqmw ly gvwcvhtrsx abqepznbms uzh tbfpuz!
+            </div>
+        </div>
+    </div>
+    <script>
+        const site = ["square", "messenger", "facebook", "instagram", "tiktok"];
+        const tag = ["Book", "Contact", "Connect with", "See", "Watch"];
+
+        function clickDiv(site) {
+            if (site == "square") {
+                window.open("https://nailedbykinsey.square.site/");
+            } else if (site == "messenger") {
+                window.open("http://fb.me/msg/nailedbykinsey");
+            } else if (site == "facebook") {
+                window.open("https://www.facebook.com/nailedbykinsey");
+            } else if (site == "instagram") {
+                window.open("https://www.instagram.com/nailedbykinsey/");
+            } else if (site == "tiktok") {
+                window.open("https://www.tiktok.com/@nailedbykinsey");
+            } else {
+                console.log("error");
+            };
+        };
+    </script>
+</body>
+</html>
